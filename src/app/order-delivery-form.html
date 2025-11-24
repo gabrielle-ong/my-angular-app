@@ -1,0 +1,66 @@
+<div class="form-container">
+  <h1>Order Delivery Form</h1>
+  
+  <form class="delivery-form">
+    <mat-form-field appearance="outline">
+      <mat-label>Customer Name</mat-label>
+      <input matInput [(ngModel)]="customerName" name="customerName" placeholder="Enter your name">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Phone Number</mat-label>
+      <input matInput [(ngModel)]="phoneNumber" name="phoneNumber" placeholder="Enter phone number" type="tel">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Delivery Address</mat-label>
+      <textarea matInput [(ngModel)]="deliveryAddress" name="deliveryAddress" placeholder="Enter delivery address" rows="3"></textarea>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Delivery Date</mat-label>
+      <input matInput [matDatepicker]="picker" [(ngModel)]="deliveryDate" name="deliveryDate">
+      <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <div class="radio-group">
+      <label class="radio-label">Preferred Delivery Time</label>
+      <mat-radio-group [(ngModel)]="deliveryTime" name="deliveryTime">
+        <mat-radio-button value="morning">Morning (9 AM - 12 PM)</mat-radio-button>
+        <mat-radio-button value="afternoon">Afternoon (12 PM - 5 PM)</mat-radio-button>
+        <mat-radio-button value="evening">Evening (5 PM - 8 PM)</mat-radio-button>
+        <mat-radio-button value="anytime">Anytime</mat-radio-button>
+      </mat-radio-group>
+    </div>
+
+    <div class="radio-group">
+      <label class="radio-label">Payment Method</label>
+      <mat-radio-group [(ngModel)]="paymentMethod" name="paymentMethod">
+        <mat-radio-button value="card">Credit/Debit Card</mat-radio-button>
+        <mat-radio-button value="cash">Cash on Delivery</mat-radio-button>
+        <mat-radio-button value="paypal">PayPal</mat-radio-button>
+      </mat-radio-group>
+    </div>
+
+    <div class="checkbox-group">
+      <label class="checkbox-label">Special Instructions</label>
+      <div class="checkbox-options">
+        <mat-checkbox [(ngModel)]="fragileItems" name="fragileItems">Handle with care - Fragile items</mat-checkbox>
+        <mat-checkbox [(ngModel)]="giftWrap" name="giftWrap">Gift wrapping requested</mat-checkbox>
+        <mat-checkbox [(ngModel)]="requireSignature" name="requireSignature">Require signature upon delivery</mat-checkbox>
+      </div>
+    </div>
+
+    <div class="switch-group">
+      <mat-slide-toggle [(ngModel)]="leaveAtDoorway" name="leaveAtDoorway">
+        Leave at doorway
+      </mat-slide-toggle>
+    </div>
+
+    <button mat-raised-button color="primary" type="submit" class="submit-button">
+      Submit Order
+    </button>
+  </form>
+</div>
+

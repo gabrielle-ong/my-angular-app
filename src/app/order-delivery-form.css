@@ -1,0 +1,67 @@
+.form-container {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: var(--mat-sys-surface);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--mat-sys-on-surface);
+}
+
+.delivery-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+.radio-group,
+.checkbox-group,
+.switch-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1rem;
+  background-color: var(--mat-sys-surface-container);
+  border-radius: 4px;
+}
+
+.radio-label,
+.checkbox-label {
+  font-weight: 500;
+  color: var(--mat-sys-on-surface);
+  margin-bottom: 0.5rem;
+}
+
+mat-radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.checkbox-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.switch-group {
+  padding: 1rem;
+}
+
+.submit-button {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0.75rem;
+  font-size: 1rem;
+  height: 48px;
+}
+
