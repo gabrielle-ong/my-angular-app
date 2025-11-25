@@ -6,7 +6,15 @@ import { FormsModule } from '@angular/forms';
   selector: 'ui-toggle',
   standalone: true,
   imports: [MatSlideToggleModule, FormsModule],
-  templateUrl: './ui-toggle.html',
+  template: `
+    <mat-slide-toggle
+      [checked]="checked"
+      [disabled]="disabled"
+      (change)="onCheckedChange($event.checked)"
+    >
+      {{ label }}
+    </mat-slide-toggle>
+  `,
   styleUrl: './ui-toggle.css'
 })
 export class UiToggleComponent {

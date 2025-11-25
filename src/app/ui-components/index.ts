@@ -5,3 +5,4 @@ export { UiButtonComponent } from './ui-button/ui-button';
 export { UiDatePickerComponent } from './ui-date-picker/ui-date-picker';
 export { UiRadioButtonComponent } from './ui-radio-button/ui-radio-button';
 export { UiRadioGroupComponent, type RadioOption } from './ui-radio-group/ui-radio-group';
+export { UiAccordionComponent, type AccordionPanel } from './ui-accordion/ui-accordion';

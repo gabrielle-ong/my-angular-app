@@ -15,7 +15,21 @@ import { FormsModule } from '@angular/forms';
     MatNativeDateModule,
     FormsModule
   ],
-  templateUrl: './ui-date-picker.html',
+  template: `
+    <mat-form-field appearance="outline">
+      <mat-label>{{ label }}</mat-label>
+      <input
+        matInput
+        [matDatepicker]="picker"
+        [value]="value"
+        [disabled]="disabled"
+        [required]="required"
+        (dateChange)="onValueChange($event.value)"
+      />
+      <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  `,
   styleUrl: './ui-date-picker.css'
 })
 export class UiDatePickerComponent {

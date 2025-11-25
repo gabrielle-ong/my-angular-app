@@ -11,7 +11,20 @@ export interface RadioOption {
   selector: 'ui-radio-group',
   standalone: true,
   imports: [MatRadioModule, FormsModule],
-  templateUrl: './ui-radio-group.html',
+  template: `
+    <div class="radio-group">
+      @if (label) {
+        <label class="radio-label">{{ label }}</label>
+      }
+      <mat-radio-group [value]="value" [disabled]="disabled" (change)="onValueChange($event.value)">
+        @for (option of options; track option.value) {
+          <mat-radio-button [value]="option.value" [disabled]="disabled">
+            {{ option.label }}
+          </mat-radio-button>
+        }
+      </mat-radio-group>
+    </div>
+  `,
   styleUrl: './ui-radio-group.css'
 })
 export class UiRadioGroupComponent {

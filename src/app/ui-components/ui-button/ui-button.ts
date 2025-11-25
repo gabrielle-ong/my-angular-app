@@ -5,7 +5,49 @@ import { MatButtonModule } from '@angular/material/button';
   selector: 'ui-button',
   standalone: true,
   imports: [MatButtonModule],
-  templateUrl: './ui-button.html',
+  template: `
+    @if (variant === 'raised') {
+      <button
+        mat-raised-button
+        [color]="color"
+        [disabled]="disabled"
+        [type]="type"
+        (click)="onClick()"
+      >
+        {{ label }}
+      </button>
+    } @else if (variant === 'flat') {
+      <button
+        mat-flat-button
+        [color]="color"
+        [disabled]="disabled"
+        [type]="type"
+        (click)="onClick()"
+      >
+        {{ label }}
+      </button>
+    } @else if (variant === 'stroked') {
+      <button
+        mat-stroked-button
+        [color]="color"
+        [disabled]="disabled"
+        [type]="type"
+        (click)="onClick()"
+      >
+        {{ label }}
+      </button>
+    } @else {
+      <button
+        mat-icon-button
+        [color]="color"
+        [disabled]="disabled"
+        [type]="type"
+        (click)="onClick()"
+      >
+        {{ label }}
+      </button>
+    }
+  `,
   styleUrl: './ui-button.css'
 })
 export class UiButtonComponent {

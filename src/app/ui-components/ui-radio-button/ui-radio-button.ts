@@ -6,7 +6,11 @@ import { FormsModule } from '@angular/forms';
   selector: 'ui-radio-button',
   standalone: true,
   imports: [MatRadioModule, FormsModule],
-  templateUrl: './ui-radio-button.html',
+  template: `
+    <mat-radio-button [value]="value" [disabled]="disabled">
+      {{ label }}
+    </mat-radio-button>
+  `,
   styleUrl: './ui-radio-button.css'
 })
 export class UiRadioButtonComponent {

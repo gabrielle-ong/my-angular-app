@@ -6,7 +6,15 @@ import { FormsModule } from '@angular/forms';
   selector: 'ui-checkbox',
   standalone: true,
   imports: [MatCheckboxModule, FormsModule],
-  templateUrl: './ui-checkbox.html',
+  template: `
+    <mat-checkbox
+      [checked]="checked"
+      [disabled]="disabled"
+      (change)="onCheckedChange($event.checked)"
+    >
+      {{ label }}
+    </mat-checkbox>
+  `,
   styleUrl: './ui-checkbox.css'
 })
 export class UiCheckboxComponent {
