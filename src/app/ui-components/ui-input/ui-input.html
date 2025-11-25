@@ -1,0 +1,27 @@
+@if (type === 'textarea') {
+  <mat-form-field appearance="outline">
+    <mat-label>{{ label }}</mat-label>
+    <textarea
+      matInput
+      [value]="value"
+      [placeholder]="placeholder"
+      [disabled]="disabled"
+      [required]="required"
+      [rows]="rows"
+      (input)="onValueChange($any($event.target).value)"
+    ></textarea>
+  </mat-form-field>
+} @else {
+  <mat-form-field appearance="outline">
+    <mat-label>{{ label }}</mat-label>
+    <input
+      matInput
+      [type]="type"
+      [value]="value"
+      [placeholder]="placeholder"
+      [disabled]="disabled"
+      [required]="required"
+      (input)="onValueChange($any($event.target).value)"
+    />
+  </mat-form-field>
+}

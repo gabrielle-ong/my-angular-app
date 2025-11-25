@@ -1,0 +1,17 @@
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.radio-label {
+  font-weight: 500;
+  color: var(--mat-sys-on-surface);
+  margin-bottom: 0.5rem;
+}
+
+mat-radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}

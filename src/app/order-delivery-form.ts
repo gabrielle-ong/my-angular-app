@@ -1,29 +1,25 @@
 import { Component } from '@angular/core';
-import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
-import { MatButtonModule } from '@angular/material/button';
-import { MatNativeDateModule } from '@angular/material/core';
-import { MatCheckboxModule } from '@angular/material/checkbox';
-import { MatRadioModule } from '@angular/material/radio';
-import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import { MatSelectModule } from '@angular/material/select';
 import { FormsModule } from '@angular/forms';
+import {
+  UiInputComponent,
+  UiDatePickerComponent,
+  UiRadioGroupComponent,
+  UiCheckboxComponent,
+  UiToggleComponent,
+  UiButtonComponent
+} from './ui-components';
 
 @Component({
   selector: 'app-order-delivery-form',
   standalone: true,
   imports: [
-    MatDatepickerModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatButtonModule,
-    MatNativeDateModule,
-    MatCheckboxModule,
-    MatRadioModule,
-    MatSlideToggleModule,
-    MatSelectModule,
-    FormsModule
+    FormsModule,
+    UiInputComponent,
+    UiDatePickerComponent,
+    UiRadioGroupComponent,
+    UiCheckboxComponent,
+    UiToggleComponent,
+    UiButtonComponent
   ],
   templateUrl: './order-delivery-form.html',
   styleUrl: './order-delivery-form.css'
