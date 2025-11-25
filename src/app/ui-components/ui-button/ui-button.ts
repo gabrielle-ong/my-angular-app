@@ -9,6 +9,7 @@ import { MatIconModule } from '@angular/material/icon';
   template: `
     @if (type === 'basic') {
       <button
+        mat-button
         [color]="color"
         [disabled]="disabled"
         [type]="buttonType"
