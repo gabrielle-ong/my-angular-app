@@ -28,3 +28,4 @@ export class UiToggleComponent {
     this.checkedChange.emit(checked);
   }
 }
+
